@@ -36,11 +36,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>D:\steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="HeavyWeapons">
-      <HintPath>..\..\..\VanillaExpandedFramework\1.5\Assemblies\HeavyWeapons.dll</HintPath>
+      <HintPath>D:\steam\steamapps\workshop\content\294100\2023507013\1.5\Assemblies\HeavyWeapons.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -49,23 +49,39 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>D:\steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>D:\steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <HintPath>D:\steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>D:\steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VFECore">
-      <HintPath>..\..\..\VanillaExpandedFramework\1.5\Assemblies\VFECore.dll</HintPath>
+      <HintPath>D:\steam\steamapps\workshop\content\294100\2023507013\1.6\Assemblies\VEF.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MVCF">
+      <HintPath>D:\steam\steamapps\workshop\content\294100\2023507013\1.6\Assemblies\MVCF.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="KCSG">
+      <HintPath>D:\steam\steamapps\workshop\content\294100\2023507013\1.6\Assemblies\KCSG.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Outposts">
+      <HintPath>D:\steam\steamapps\workshop\content\294100\2023507013\1.6\Assemblies\Outposts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PipeSystem">
+      <HintPath>D:\steam\steamapps\workshop\content\294100\2023507013\1.6\Assemblies\PipeSystem.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
