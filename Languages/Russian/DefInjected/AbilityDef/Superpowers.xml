@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <VFEA_SuperJump.label>Суперпрыжок</VFEA_SuperJump.label>
+  <VFEA_SuperJump.description>Прыжок на короткую дистанцию (10 клеток) в пределах прямой видимости для быстрого сближения с врагом.</VFEA_SuperJump.description>
+  <VFEA_Berserk.label>ярость (телепатия)</VFEA_Berserk.label>
+  <VFEA_Berserk.description>Примените на врага, чтобы он напал на своих союзников.</VFEA_Berserk.description>
+  <VFEA_Calm.label>успокоение (телепатия)</VFEA_Calm.label>
+  <VFEA_Calm.description>Примените на союзника, чтобы мгновенно вывести его из нервного срыва.</VFEA_Calm.description>
+  <VFEA_PsychicShock.label>психический шок</VFEA_PsychicShock.label>
+  <VFEA_PsychicShock.description>Выпустите психический разряд по врагу, чтобы вывести его из строя.</VFEA_PsychicShock.description>
+  <!-- ...добавьте остальные способности по аналогии... -->
+</LanguageData>

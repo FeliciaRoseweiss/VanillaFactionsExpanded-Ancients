@@ -1,0 +1,39 @@
+# Build outputs
+bin/
+obj/
+*.pdb
+*.exe
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+Logs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# RimWorld specific
+About/PublishedFileId.txt
+About/Manifest.xml
+
+# Backup files
+*.bak
+*.orig
+*~

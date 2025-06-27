@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <VFEAncients.SolarPowerUp>Солнечная вспышка: усиление</VFEAncients.SolarPowerUp>
+    <VFEAncients.TabPowers>Способности</VFEAncients.TabPowers>
+    <VFEAncients.Superpowers>Суперспособности</VFEAncients.Superpowers>
+    <VFEAncients.Weaknesses>Слабости</VFEAncients.Weaknesses>
+    <VFEAncients.Effects>Эффекты:</VFEAncients.Effects>
+    <VFEAncients.Effect.AddAbility>Дать способность: {0}</VFEAncients.Effect.AddAbility>
+    <VFEAncients.Effect.AddHediff>Добавить состояние здоровья: {0}</VFEAncients.Effect.AddHediff>
+    <VFEAncients.Effect.NullThought>Обнулить мысль: {0}</VFEAncients.Effect.NullThought>
+    <VFEAncients.MarksmanshipTooltip>100% (Меткость)</VFEAncients.MarksmanshipTooltip>
+    <VFEAncients.Reason.KilledSomeone>Причина: Совершено убийство</VFEAncients.Reason.KilledSomeone>
+    <VFEAncients.Reason.Rejected>Причина: Отказано {0}</VFEAncients.Reason.Rejected>
+    <VFEAncients.CannotPrioritizeAudacious>Нельзя назначить: {0} слишком дерзок</VFEAncients.CannotPrioritizeAudacious>
+    <VFEAncients.IncapableOfTooltipPower>Причина: способность {0}</VFEAncients.IncapableOfTooltipPower>
+    <VFEAncients.NotInMentalState>Не в состоянии аффекта</VFEAncients.NotInMentalState>
+    <VFEAncients.NotAnimal>Не животное</VFEAncients.NotAnimal>
+    <VFEAncients.Tame>Не применяется к приручённым животным</VFEAncients.Tame>
+    <VFEAncients.NoTargets>Нет возможных целей</VFEAncients.NoTargets>
+    <VFEAncients.RefillsIn>Восстановится через {0}</VFEAncients.RefillsIn>
+    <VFEAncients.EnterGeneTailoringPod>Войти в генетическую капсулу</VFEAncients.EnterGeneTailoringPod>
+    <VFEAncients.CarryToGeneTailoringPod>Отнести {0} в генетическую капсулу</VFEAncients.CarryToGeneTailoringPod>
+    <VFEAncients.CarryToBioBattery>Отнести {0} к биобатарее</VFEAncients.CarryToBioBattery>
+    <VFEAncients.Empower>Добавить суперспособность</VFEAncients.Empower>
+    <VFEAncients.RemoveWeakness>Убрать слабость</VFEAncients.RemoveWeakness>
+    <VFEAncients.Empowered.Label>Эксперимент успешен: {0}</VFEAncients.Empowered.Label>
+    <VFEAncients.Empowered.Text>Эксперимент в генетической капсуле прошёл успешно! {0} получил способность {1}. Однако также получена слабость {2}.</VFEAncients.Empowered.Text>
+    <VFEAncients.RemoveWeakness.Label>Эксперимент успешен: {0}</VFEAncients.RemoveWeakness.Label>
+    <VFEAncients.RemoveWeakness.Text>Эксперимент в генетической капсуле прошёл успешно! {0} избавился от слабости {1}.</VFEAncients.RemoveWeakness.Text>
+    <VFEAncients.StartOperation>Начать операцию</VFEAncients.StartOperation>
+    <VFEAncients.CurrentOperation>Текущая операция</VFEAncients.CurrentOperation>
+    <VFEAncients.ExperimentFailed>Эксперимент провален</VFEAncients.ExperimentFailed>
+    <VFEAncients.Death>Смерть</VFEAncients.Death>
+    <VFEAncients.ExperimentFailed.Death>Пациент погиб, эксперимент провален. Новые способности не получены.</VFEAncients.ExperimentFailed.Death>
+    <VFEAncients.Berserk>Буйство</VFEAncients.Berserk>
+    <VFEAncients.ExperimentFailed.Berserk>Пациент получил тяжёлое повреждение мозга и обезумел. Новые способности не получены.</VFEAncients.ExperimentFailed.Berserk>
+    <VFEAncients.BrainDeath>Смерть мозга</VFEAncients.BrainDeath>
+    <VFEAncients.ExperimentFailed.BrainDeath>Пациент полностью утратил мозговую активность. Новые способности не получены.</VFEAncients.ExperimentFailed.BrainDeath>
+    <VFEAncients.LaunchSupplies>Запустить припасы</VFEAncients.LaunchSupplies>
+    <VFEAncients.ExpiryIn>Самоуничтожение через {0}</VFEAncients.ExpiryIn>
+    <VFEAncients.MessageNoWardenCapableOfRecruitment>Нет надзирателя, способного к вербовке.</VFEAncients.MessageNoWardenCapableOfRecruitment>
+    <VFEAncients.InterrogationSuccess>Допрос успешен</VFEAncients.InterrogationSuccess>
+    <VFEAncients.InterrogationSuccessDetail>{0} успешно допросил {1}, который раскрыл местоположение {2}.</VFEAncients.InterrogationSuccessDetail>
+    <VFEAncients.InterrogationFailure>Допрос провален!</VFEAncients.InterrogationFailure>
+    <VFEAncients.DeterioratingUncontained>не сдерживается</VFEAncients.DeterioratingUncontained>
+    <VFEAncients.FireAtPods>Стрелять по капсулам</VFEAncients.FireAtPods>
+    <VFEAncients.FireAtPawns>Стрелять по врагам</VFEAncients.FireAtPawns>
+    <VFEAncients.FireAtProjectiles>Стрелять по снарядам</VFEAncients.FireAtProjectiles>
+    <VFEAncients.FireAtPodsDesc>Позволяет турели стрелять по вражеским десантным капсулам.</VFEAncients.FireAtPodsDesc>
+    <VFEAncients.FireAtPawnsDesc>Позволяет турели стрелять по врагам в радиусе, как обычная турель.</VFEAncients.FireAtPawnsDesc>
+</LanguageData>

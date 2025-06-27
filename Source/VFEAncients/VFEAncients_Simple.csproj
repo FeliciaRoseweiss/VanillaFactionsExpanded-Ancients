@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBAFABF1-D772-4803-8760-390259675DE4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VFEAncients</RootNamespace>
+    <AssemblyName>VFEAncients</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\1.6\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\1.6\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>D:\steam\steamapps\workshop\content\294100\2023507013\1.6\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>D:\steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>D:\steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>D:\steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VEF">
+      <HintPath>D:\steam\steamapps\workshop\content\294100\2023507013\1.6\Assemblies\VEF.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abilities\Ability.cs" />
+    <Compile Include="Abilities\Ability_Animal.cs" />
+    <Compile Include="Abilities\Ability_Berserk.cs" />
+    <Compile Include="Abilities\Ability_Calm.cs" />
+    <Compile Include="Abilities\Ability_GloryKill.cs" />
+    <Compile Include="Abilities\Ability_Heal.cs" />
+    <Compile Include="Abilities\Ability_Jump.cs" />
+    <Compile Include="Abilities\Ability_MetaMorph.cs" />
+    <Compile Include="Abilities\Ability_Thought.cs" />
+    <Compile Include="Comps\CompAncientSolar.cs" />
+    <Compile Include="Comps\CompBioBattery.cs" />
+    <Compile Include="Comps\CompQuestOnHacked.cs" />
+    <Compile Include="Comps\HediffComp_SoundOnRemove.cs" />
+    <Compile Include="Comps\PreceptComp_DisableIncident.cs" />
+    <Compile Include="Comps\StorytellerComps.cs" />
+    <Compile Include="Dialog_ChoosePowers.cs" />
+    <Compile Include="HarmonyPatches\Helpers.cs" />
+    <Compile Include="HarmonyPatches\MendingPatches.cs" />
+    <Compile Include="HarmonyPatches\MetaMorphPatches.cs" />
+    <Compile Include="HarmonyPatches\QuestPatches.cs" />
+    <Compile Include="HarmonyPatches\SolarFlarePowerNet.cs" />
+    <Compile Include="HarmonyPatches\StorytellerPatches.cs" />
+    <Compile Include="Jobs\JobDriver_CarryToBioBattery.cs" />
+    <Compile Include="PawnRenderNode_Metamorphed.cs" />
+    <Compile Include="PowerWorkers\PowerWorker.cs" />
+    <Compile Include="PowerWorkers\PowerWorker_Damages.cs" />
+    <Compile Include="QuestNode_GetFactionOfDef.cs" />
+    <Compile Include="ScenPart_ReconnectAllPowerBuildings.cs" />
+    <Compile Include="Things\Building_AncientCryptosleepSarchophagus.cs" />
+    <Compile Include="Things\Building_Cooler.cs" />
+    <Compile Include="Things\Building_PipelineJunction.cs" />
+    <Compile Include="Comps\CompNeedsContainment.cs" />
+    <Compile Include="Comps\CompPowerPlantSteam.cs" />
+    <Compile Include="Comps\CompSupplyCrate.cs" />
+    <Compile Include="Comps\CompSupplySlingshot.cs" />
+    <Compile Include="Comps\CompProperties_Facility_PowerUnlock.cs" />
+    <Compile Include="Comps\CompDisappearOnHacked.cs" />
+    <Compile Include="Comps\CompGeneTailoringPod.cs" />
+    <Compile Include="Comps\CompSolarPowerUp.cs" />
+    <Compile Include="Comps\Fail.cs" />
+    <Compile Include="HarmonyPatches\BuildingPatches.cs" />
+    <Compile Include="HarmonyPatches\PointDefensePatches.cs" />
+    <Compile Include="HarmonyPatches\PreceptPatches.cs" />
+    <Compile Include="Things\Building_TurretPD.cs" />
+    <Compile Include="Things\Building_VaultDoor.cs" />
+    <Compile Include="Things\SuperJumpingPawn.cs" />
+    <Compile Include="Workers\IncidentWorker_SupplyDrop.cs" />
+    <Compile Include="Workers\InteractionWorker_Interrogate.cs" />
+    <Compile Include="Jobs\JobDriver_InterrogatePrisoner.cs" />
+    <Compile Include="Jobs\JobDriver_CarryToGeneTailoringPod.cs" />
+    <Compile Include="Jobs\JobDriver_EnterGeneTailoringPod.cs" />
+    <Compile Include="Jobs\JobDriver_SitFacingBuilding_Learning.cs" />
+    <Compile Include="Things\ElectricityBlast.cs" />
+    <Compile Include="GameComponent_Ancients.cs" />
+    <Compile Include="HarmonyPatches\AbilityPatches.cs" />
+    <Compile Include="Things\IceProjectile.cs" />
+    <Compile Include="Things\LaserEyeBeam.cs" />
+    <Compile Include="Things\LightningSpot.cs" />
+    <Compile Include="Workers\InteractionWorker_RomanceAttemptLustful.cs" />
+    <Compile Include="Jobs\JobDriver_ZealotExecution.cs" />
+    <Compile Include="Workers\MentalBreakWorker_Hallucinations.cs" />
+    <Compile Include="Jobs\JobGiver_Hallucinations.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- Disable NuGet -->
+  <Target Name="ResolveNuGetPackageAssets" />
+</Project>

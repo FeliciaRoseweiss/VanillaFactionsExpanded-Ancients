@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <VFEA_LargeSupplyCrate.label>большой герметичный ящик</VFEA_LargeSupplyCrate.label>
+  <VFEA_LargeSupplyCrate.description>Большой ящик с некоторыми строительными материалами и компонентами. Вскрытие занимает немного времени и не несёт опасности.</VFEA_LargeSupplyCrate.description>
+  <VFEA_AncientBroadcastStation.label>древняя радиостанция</VFEA_AncientBroadcastStation.label>
+  <VFEA_AncientBroadcastStation.description>Старая станция дальней связи, часто встречающаяся в древних хранилищах. Её можно взломать, чтобы найти местоположение следующего хранилища.</VFEA_AncientBroadcastStation.description>
+</LanguageData>
