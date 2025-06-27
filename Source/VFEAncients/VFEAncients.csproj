@@ -40,7 +40,6 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="HeavyWeapons">
-      <HintPath>..\..\..\VanillaExpandedFramework\1.6\Assemblies\HeavyWeapons.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
