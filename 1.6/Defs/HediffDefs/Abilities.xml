@@ -38,7 +38,7 @@ index 0000000000000000000000000000000000000000..ee123c0cff718143cfe3f7e08ab2bda3
 +    <description>Out of phase with normal reality, allowing walking through solid matter.</description>
 +    <comps>
 +      <li Class="HediffCompProperties">
-+        <compClass>VFECore.HediffComp_Phasing</compClass>
++        <compClass>VEF.HediffComp_Phasing</compClass>
 +      </li>
 +      <li Class="HediffCompProperties_Disappears">
 +        <showRemainingTime>True</showRemainingTime>

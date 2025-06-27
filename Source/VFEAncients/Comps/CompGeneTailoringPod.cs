@@ -6,7 +6,7 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 using Verse.AI;
-using VFECore.OptionalFeatures;
+using VEF.OptionalFeatures;
 
 namespace VFEAncients
 {

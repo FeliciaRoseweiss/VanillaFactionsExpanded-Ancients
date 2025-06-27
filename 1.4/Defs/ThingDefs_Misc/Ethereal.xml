@@ -16,7 +16,7 @@
         <category>Building</category>
         <comps>
             <li>
-                <compClass>VFECore.Abilities.CompSpawnedBuilding</compClass>
+                <compClass>VEF.Abilities.CompSpawnedBuilding</compClass>
             </li>
         </comps>
     </ThingDef>

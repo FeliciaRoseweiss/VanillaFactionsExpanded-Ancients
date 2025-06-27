@@ -21,7 +21,7 @@ index 0000000000000000000000000000000000000000..e6d9036264ecc29420c6eb16f9d215f8
 +        <category>Building</category>
 +        <comps>
 +            <li>
-+                <compClass>VFECore.Abilities.CompSpawnedBuilding</compClass>
++                <compClass>VEF.Abilities.CompSpawnedBuilding</compClass>
 +            </li>
 +        </comps>
 +    </ThingDef>
@@ -49,7 +49,7 @@ index 0000000000000000000000000000000000000000..e6d9036264ecc29420c6eb16f9d215f8
 +    </ThingDef>
 +    <ThingDef ParentName="PawnFlyerBase">
 +        <defName>VFEA_SuperJumpingPawn</defName>
-+        <thingClass>VFECore.Abilities.AbilityPawnFlyer</thingClass>
++        <thingClass>VEF.Abilities.AbilityPawnFlyer</thingClass>
 +        <pawnFlyer>
 +            <flightDurationMin>0.1</flightDurationMin>
 +            <flightSpeed>30</flightSpeed>
