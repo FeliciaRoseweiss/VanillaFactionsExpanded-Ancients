@@ -1,0 +1,36 @@
+diff --git a//dev/null b/1.6/Defs/DamageDefs/Damages.xml
+index 0000000000000000000000000000000000000000..f4f7b9b0a5385d5407489d5a2076412c4dec2b7d 100644
+--- a//dev/null
++++ b/1.6/Defs/DamageDefs/Damages.xml
+@@ -0,0 +1,31 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<Defs>
++    <DamageDef>
++		<defName>VFEA_AcidBreath</defName>
++		<label>acid breath</label>
++		<workerClass>DamageWorker_AddInjury</workerClass>
++		<externalViolence>true</externalViolence>
++		<hediff>VEF_AcidBurn</hediff>
++		<defaultDamage>5</defaultDamage>
++
++		<deathMessage>{0} has been dissolved to nothing.</deathMessage>
++		<additionalHediffs>
++			<li>
++				<hediff>VEF_AcidBuildup</hediff>
++				<severityPerDamageDealt>0.01</severityPerDamageDealt>
++			</li>
++		</additionalHediffs>
++
++		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
++
++		<armorCategory>Heat</armorCategory>
++		<explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
++		<explosionHeatEnergyPerCell>0</explosionHeatEnergyPerCell>
++		<explosionCellFleck>BlastDry</explosionCellFleck>
++		<explosionColorCenter>(0.224, 1.0, 0.078)</explosionColorCenter>
++		<explosionColorEdge>(0.133, 0.545, 0.133)</explosionColorEdge>
++		<soundExplosion>VFEA_AcidSpit_Shot</soundExplosion>
++		<combatLogRules>Damage_Bomb</combatLogRules>
++	</DamageDef>
++	
++</Defs>

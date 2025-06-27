@@ -1,0 +1,23 @@
+diff --git a//dev/null b/1.6/Patches/MedPodCompat.xml
+index 0000000000000000000000000000000000000000..151000f584fcc9413d588da099d52db6b90a895d 100644
+--- a//dev/null
++++ b/1.6/Patches/MedPodCompat.xml
+@@ -0,0 +1,18 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<Patch>
++    <Operation Class="PatchOperationFindMod">
++        <mods>
++            <li>MedPod</li>
++        </mods>
++        <match Class="PatchOperationAdd">
++            <xpath>Defs/ThingDef[@Name="MedPodBedBase"]/comps/li[@Class="MedPod.CompProperties_TreatmentRestrictions"]/neverTreatableHediffs</xpath>
++            <value>
++                <li>Power_Blind</li>
++                <li>Power_Deaf</li>
++                <li>Power_Mute</li>
++                <li>Power_Paralysis</li>
++                <li>Power_PainHypersensitivity</li>
++            </value>
++        </match>
++    </Operation>
++</Patch>

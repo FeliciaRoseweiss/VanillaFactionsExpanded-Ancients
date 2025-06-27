@@ -1,0 +1,23 @@
+diff --git a//dev/null b/1.6/Defs/ThinkTreeDefs/Powers.xml
+index 0000000000000000000000000000000000000000..a9be7f4c01e3d0262c7d07462f090eb8b3e7d9d5 100644
+--- a//dev/null
++++ b/1.6/Defs/ThinkTreeDefs/Powers.xml
+@@ -0,0 +1,18 @@
++<?xml version="1.0" encoding="utf-8" ?>
++<Defs>
++    <ThinkTreeDef>
++        <defName>PowerDuty</defName>
++        <insertTag>Humanlike_PostDuty</insertTag>
++        <insertPriority>100</insertPriority>
++        <thinkRoot Class="ThinkNode_Priority">
++            <subNodes>
++                <li Class="VFEAncients.ThinkNode_ConditionalPower">
++                    <Power>Zealot</Power>
++                    <subNodes>
++                        <li Class="VFEAncients.JobGiver_ZealotExecution" />
++                    </subNodes>
++                </li>
++            </subNodes>
++        </thinkRoot>
++    </ThinkTreeDef>
++</Defs>

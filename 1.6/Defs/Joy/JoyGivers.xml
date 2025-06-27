@@ -1,0 +1,38 @@
+diff --git a//dev/null b/1.6/Defs/Joy/JoyGivers.xml
+index 0000000000000000000000000000000000000000..b8de5b81c58e012f4db13e57e17dcf9d14733708 100644
+--- a//dev/null
++++ b/1.6/Defs/Joy/JoyGivers.xml
+@@ -0,0 +1,33 @@
++﻿<?xml version="1.0" encoding="utf-8" ?>
++<Defs>
++
++  <JoyGiverDef>
++    <defName>VFEA_Play_AncientEducator</defName>
++    <giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
++    <baseChance>2</baseChance>
++    <thingDefs>
++      <li>VFEA_AncientEducator</li>
++    </thingDefs>
++    <jobDef>VFEA_Play_AncientEducator</jobDef>
++    <joyKind>Gaming_Cerebral</joyKind>
++    <requiredCapacities>
++      <li>Manipulation</li>
++    </requiredCapacities>
++  </JoyGiverDef>
++  
++  <JoyGiverDef>
++    <defName>VFEA_Play_AncientFoosballTable</defName>
++    <giverClass>JoyGiver_PlayBilliards</giverClass>
++    <baseChance>4</baseChance>
++    <thingDefs>
++      <li>VFEA_AncientFoosballTable</li>
++    </thingDefs>
++    <jobDef>VFEA_Play_AncientFoosballTable</jobDef>
++    <joyKind>Gaming_Dexterity</joyKind>
++    <requiredCapacities>
++      <li>Sight</li>
++      <li>Manipulation</li>
++    </requiredCapacities>
++  </JoyGiverDef>
++
++</Defs>
