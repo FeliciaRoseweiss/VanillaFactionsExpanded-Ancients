@@ -11,6 +11,35 @@ namespace VFEAncients
     {
         public static Pawn_PowerTracker GetPowerTracker(this Pawn pawn) => Pawn_PowerTracker.Get(pawn);
 
+        // Extension methods for powers
+        public static bool HasPower<T>(this Pawn pawn) where T : PowerWorker
+        {
+            var tracker = pawn.GetPowerTracker();
+            return tracker?.AllPowers.Any(p => p.Worker is T) ?? false;
+        }
+
+        public static bool HasPower<T>(this Thing thing) where T : PowerWorker
+        {
+            if (thing is Pawn pawn)
+                return pawn.HasPower<T>();
+            return false;
+        }
+
+        public static T GetData<T>(this Pawn pawn) where T : WorkerData
+        {
+            var tracker = pawn.GetPowerTracker();
+            return tracker?.AllPowers
+                .Select(p => p.Worker.GetData<T>())
+                .FirstOrDefault(data => data != null);
+        }
+
+        public static T GetData<T>(this Thing thing) where T : WorkerData
+        {
+            if (thing is Pawn pawn)
+                return pawn.GetData<T>();
+            return null;
+        }
+
         public static void Split<T>(this IEnumerable<T> source, out List<T> truthy, out List<T> falsy, Func<T, bool> func)
         {
             truthy = new List<T>();

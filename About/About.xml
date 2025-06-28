@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
- <ModMetaData>
+<ModMetaData>
 	<name>Vanilla Factions Expanded - Ancients</name>
-	<author>Oskar Potocki, xrushha, legodude17</author>
-	<url></url>
+	<author>Oskar Potocki, Sarg Bjornson, Chowder</author>
+	<url>https://github.com/Vanilla-Expanded/VanillaFactionsExpanded-Ancients</url>
     <supportedVersions>
-		<li>1.3</li>
 		<li>1.4</li>
 		<li>1.5</li>
-		<li>1.6</li>
+        <li>1.6</li>
 	</supportedVersions>
-	<packageId>VanillaExpanded.VFEA</packageId>
+	<packageId>OskarPotocki.VFE.Ancients</packageId>
 	<modIconPath IgnoreIfNoMatchingField="True">UI/VELogo</modIconPath>
 	<description>One faction we have never really tinkered with before is the Ancients. You might know them from popping out of the cryptosleep caskets in Ancient dangers, but what really is their story remains a mystery. With Ideology DLC, players can see the entire ancient battlefields of twisted metal, broken down warwalkers and shells of ancient mechanoids. What really happened is also, as you're probably aware, a mystery. Well look no further.
 
@@ -31,7 +30,19 @@ This mod will expand on the ancient ruins in vanilla games, adding new ancient s
         </li>
 		</modDependencies>
 	<loadAfter>
+		<li>Ludeon.RimWorld</li>
 		<li>Ludeon.RimWorld.Ideology</li>
+		<li>brrainz.harmony</li>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>OskarPotocki.VanillaExpandedFramework</li>
+		<li>VanillaExpanded.VFECore</li>
+		<li>VanillaExpanded.KCSG</li>
+		<li>OskarPotocki.VFE.Furniture</li>
+		<li>VanillaExpanded.VanillaFurnitureExpanded</li>
+		<li>RecipeInheritance.Core</li>
+		<li>OskarPotocki.VanillaFurnitureExpanded.Medical</li>
 	</loadAfter>
- </ModMetaData>
+	<incompatibleWith>
+		<li>OskarPotocki.VFE.Ancients.Old</li>
+	</incompatibleWith>
+</ModMetaData>

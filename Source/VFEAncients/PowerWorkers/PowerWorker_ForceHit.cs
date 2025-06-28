@@ -32,8 +32,15 @@ namespace VFEAncients
         public static IEnumerable<CodeInstruction> ShotCalculationTipString_Transpile(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
         {
             var list = instructions.ToList();
+            
+            if (list.Count == 0)
+                return list;
+            
             var info1 = AccessTools.Method(typeof(ShotReport), nameof(ShotReport.GetTextReadout));
             var idx1 = list.FindIndex(ins => ins.Calls(info1));
+            if (idx1 == -1)
+                return list; // GetTextReadout call not found
+            
             var label1 = generator.DefineLabel();
             list[idx1 + 1].labels.Add(label1);
             list.InsertRange(idx1 + 1, new[]
@@ -55,6 +62,9 @@ namespace VFEAncients
         {
             var list = instructions.ToList();
 
+            if (list.Count == 0)
+                return list;
+
             var infos = new[]
             {
                 AccessTools.PropertyGetter(typeof(ShotReport), nameof(ShotReport.AimOnTargetChance_IgnoringPosture)),
@@ -63,7 +73,8 @@ namespace VFEAncients
             foreach (var info1 in infos)
             {
                 var idx1 = list.FindIndex(ins => ins.Calls(info1));
-                AddForceHitLogic(list, idx1);
+                if (idx1 != -1) // Only process if found
+                    AddForceHitLogic(list, idx1);
             }
 
             return list;
@@ -72,7 +83,14 @@ namespace VFEAncients
         public static IEnumerable<CodeInstruction> TryCastShot_Transpile_Yayos(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
         {
             var list = instructions.ToList();
+            
+            if (list.Count == 0)
+                return list;
+            
             var idx1 = list.FindLastIndex(ins => ins.opcode == OpCodes.Ldloc_S && ins.operand is LocalBuilder {LocalIndex: 15});
+            if (idx1 == -1)
+                return list; // Ldloc_S with LocalIndex 15 not found
+            
             var label1 = generator.DefineLabel();
             list[idx1 + 1].labels.Add(label1);
             list.InsertRange(idx1 + 1, new[]
@@ -86,17 +104,20 @@ namespace VFEAncients
             });
             var info = AccessTools.PropertyGetter(typeof(ShotReport), nameof(ShotReport.PassCoverChance));
             var idx2 = list.FindIndex(ins => ins.Calls(info));
-            var label2 = generator.DefineLabel();
-            list[idx2 + 1].labels.Add(label2);
-            list.InsertRange(idx2 + 1, new[]
+            if (idx2 != -1) // Only process if found
             {
-                new CodeInstruction(OpCodes.Ldarg_1),
-                new CodeInstruction(OpCodes.Callvirt, AccessTools.PropertyGetter(typeof(Verb), nameof(Verb.Caster))),
-                new CodeInstruction(OpCodes.Call, typeof(PowerWorker_ForceHit).HasPowerType()),
-                new CodeInstruction(OpCodes.Brfalse, label2),
-                new CodeInstruction(OpCodes.Pop),
-                new CodeInstruction(OpCodes.Ldc_R4, 1f)
-            });
+                var label2 = generator.DefineLabel();
+                list[idx2 + 1].labels.Add(label2);
+                list.InsertRange(idx2 + 1, new[]
+                {
+                    new CodeInstruction(OpCodes.Ldarg_1),
+                    new CodeInstruction(OpCodes.Callvirt, AccessTools.PropertyGetter(typeof(Verb), nameof(Verb.Caster))),
+                    new CodeInstruction(OpCodes.Call, typeof(PowerWorker_ForceHit).HasPowerType()),
+                    new CodeInstruction(OpCodes.Brfalse, label2),
+                    new CodeInstruction(OpCodes.Pop),
+                    new CodeInstruction(OpCodes.Ldc_R4, 1f)
+                });
+            }
             return list;
         }
 

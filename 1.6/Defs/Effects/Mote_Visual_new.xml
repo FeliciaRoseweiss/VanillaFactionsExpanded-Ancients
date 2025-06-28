@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>VFEA_Fleck_HealSmoke</defName>
+    <graphicData>
+      <texPath>Things/Mote/MistHealing</texPath>
+    </graphicData>
+    <fleckSystemClass>FleckSystemThrown</fleckSystemClass>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+      <fadeInTime>0.50</fadeInTime>
+      <solidTime>1.5</solidTime>
+      <fadeOutTime>2</fadeOutTime>
+  </FleckDef>
+
+</Defs>
+<!-- This file is part of the Vanilla Factions Expanded - Ancients modpack for RimWorld.
+  <n>Vanilla Factions Expanded - Ancients</n>
+  <author>Odin</author>
+  <description>Ancient-themed content for RimWorld</description>
+  <version>1.6</version>
+  <url>https://github.com/Vanilla-Expanded/Vanilla-Factions-Expanded-Ancients</url>
+</ModMeta> -->

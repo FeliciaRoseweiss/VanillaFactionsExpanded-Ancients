@@ -24,7 +24,14 @@ namespace VFEAncients
         public static IEnumerable<CodeInstruction> InjectOnKilled(IEnumerable<CodeInstruction> instructions)
         {
             var list = instructions.ToList();
+            
+            if (list.Count == 0)
+                return list;
+            
             var idx1 = list.FindIndex(ins => ins.opcode == OpCodes.Ldloc_2);
+            if (idx1 == -1)
+                return list; // Ldloc_2 instruction not found
+            
             list.InsertRange(idx1 + 1, new[]
             {
                 new CodeInstruction(OpCodes.Ldloc_2),

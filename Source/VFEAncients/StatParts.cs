@@ -4,6 +4,34 @@ using Verse;
 
 namespace VFEAncients
 {
+    public class StatPart_SolarPowerUp : StatPart
+    {
+        public override void TransformValue(StatRequest req, ref float val)
+        {
+            if (req.HasThing && req.Thing is Building building)
+            {
+                var comp = building.GetComp<CompSolarPowerUp>();
+                if (comp != null)
+                {
+                    val *= comp.PowerMultiplier;
+                }
+            }
+        }
+
+        public override string ExplanationPart(StatRequest req)
+        {
+            if (req.HasThing && req.Thing is Building building)
+            {
+                var comp = building.GetComp<CompSolarPowerUp>();
+                if (comp != null)
+                {
+                    return "VFEA_SolarPowerUp".Translate(comp.PowerMultiplier.ToStringPercent());
+                }
+            }
+            return null;
+        }
+    }
+
     public class StatPart_PawnStat : StatPart
     {
         public StatDef statFactor;

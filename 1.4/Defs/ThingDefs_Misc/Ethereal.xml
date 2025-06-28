@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <ThingDef ParentName="EtherealThingBase">
         <defName>VFEA_LightningSpot</defName>
@@ -16,7 +16,7 @@
         <category>Building</category>
         <comps>
             <li>
-                <compClass>VFECore.Abilities.CompSpawnedBuilding</compClass>
+                <compClass>VEF.Abilities.CompSpawnedBuilding</compClass>
             </li>
         </comps>
     </ThingDef>
