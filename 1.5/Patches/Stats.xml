@@ -1,4 +1,4 @@
-<Patch>
+﻿<Patch>
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/StatDef[defName="WorkTableWorkSpeedFactor"]/parts</xpath>
         <value>

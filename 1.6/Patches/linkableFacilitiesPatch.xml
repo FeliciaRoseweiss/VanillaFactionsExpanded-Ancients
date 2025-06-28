@@ -1,16 +1,11 @@
-diff --git a//dev/null b/1.6/Patches/linkableFacilitiesPatch.xml
-index 0000000000000000000000000000000000000000..5933bdcc66b5249035027fdf9931c795c68c710a 100644
---- a//dev/null
-+++ b/1.6/Patches/linkableFacilitiesPatch.xml
-@@ -0,0 +1,11 @@
-+<?xml version="1.0" encoding="utf-8"?>
-+<Patch>
-+
-+    <Operation Class="PatchOperationAdd">
-+        <xpath>Defs/ThingDef[defName="HospitalBed"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-+        <value>
-+		    <li>VFEA_AncientVitalsMonitor</li>
-+		</value>
-+    </Operation>
-+	
-+</Patch>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="HospitalBed"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+        <value>
+		    <li>VFEA_AncientVitalsMonitor</li>
+		</value>
+    </Operation>
+
+</Patch>

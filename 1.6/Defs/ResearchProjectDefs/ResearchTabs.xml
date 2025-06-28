@@ -1,14 +1,9 @@
-diff --git a//dev/null b/1.6/Defs/ResearchProjectDefs/ResearchTabs.xml
-index 0000000000000000000000000000000000000000..aecfc7f66e7618f3f10c7e5f837cf0c37c191638 100644
---- a//dev/null
-+++ b/1.6/Defs/ResearchProjectDefs/ResearchTabs.xml
-@@ -0,0 +1,9 @@
-+<?xml version="1.0" encoding="utf-8" ?>
-+<Defs>
-+	
-+	<ResearchTabDef>
-+		<defName>VanillaExpanded</defName>
-+		<label>Vanilla Expanded</label>
-+	</ResearchTabDef>
-+
-+</Defs>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchTabDef>
+		<defName>VanillaExpanded</defName>
+		<label>Vanilla Expanded</label>
+	</ResearchTabDef>
+
+</Defs>

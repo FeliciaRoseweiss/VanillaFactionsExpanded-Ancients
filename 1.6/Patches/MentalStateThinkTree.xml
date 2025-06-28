@@ -1,21 +1,17 @@
-diff --git a//dev/null b/1.6/Patches/MentalStateThinkTree.xml
-index 0000000000000000000000000000000000000000..84ceedd9492a1281e6070bcb3281200f8ed4691e 100644
---- a//dev/null
-+++ b/1.6/Patches/MentalStateThinkTree.xml
-@@ -0,0 +1,16 @@
-+<Patch>
-+    <Operation Class="PatchOperationAdd">
-+        <xpath>Defs/ThinkTreeDef[defName="MentalStateNonCritical"]/thinkRoot/subNodes</xpath>
-+        <value>
-+            <li Class="ThinkNode_ConditionalMentalState">
-+                <state>VFEA_Hallucinations</state>
-+                <subNodes>
-+                    <li Class="VFEAncients.JobGiver_Hallucinations" />
-+                    <li Class="JobGiver_WanderAnywhere">
-+                        <maxDanger>Deadly</maxDanger>
-+                    </li>
-+                </subNodes>
-+            </li>
-+        </value>
-+    </Operation>
-+</Patch>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThinkTreeDef[defName="MentalStateNonCritical"]/thinkRoot/subNodes</xpath>
+        <value>
+            <li Class="ThinkNode_ConditionalMentalState">
+                <state>VFEA_Hallucinations</state>
+                <subNodes>
+                    <li Class="VFEAncients.JobGiver_Hallucinations" />
+                    <li Class="JobGiver_WanderAnywhere">
+                        <maxDanger>Deadly</maxDanger>
+                    </li>
+                </subNodes>
+            </li>
+        </value>
+    </Operation>
+</Patch>

@@ -1,26 +1,20 @@
-diff --git a//dev/null b/1.6/Defs/Effects/Mote_Visual.xml
-index 0000000000000000000000000000000000000000..e1f700a420e2aca1f244bbd229442a8b5d06c43f 100644
---- a//dev/null
-+++ b/1.6/Defs/Effects/Mote_Visual.xml
-@@ -0,0 +1,16 @@
-+﻿<?xml version="1.0" encoding="utf-8" ?>
-+<Defs>
-+
-+  <FleckDef ParentName="FleckBase">
-+    <defName>VFEA_Fleck_HealSmoke</defName>
-+    <graphicData>
-+      <texPath>Things/Mote/MistHealing</texPath>
-+    </graphicData>
-+    <fleckSystemClass>FleckSystemThrown</fleckSystemClass>
-+    <altitudeLayer>MetaOverlays</altitudeLayer>
-+      <fadeInTime>0.50</fadeInTime>
-+      <solidTime>1.5</solidTime>
-+      <fadeOutTime>2</fadeOutTime>
-+  </FleckDef>
-+  
-+</Defs>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>VFEA_Fleck_HealSmoke</defName>
+    <graphicData>
+      <texPath>Things/Mote/MistHealing</texPath>
+    </graphicData>
+    <fleckSystemClass>FleckSystemThrown</fleckSystemClass>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+      <fadeInTime>0.50</fadeInTime>
+      <solidTime>1.5</solidTime>
+      <fadeOutTime>2</fadeOutTime>
+  </FleckDef>
+
+</Defs>
 <!-- This file is part of the Vanilla Factions Expanded - Ancients modpack for RimWorld.
- --><ModMeta>
   <name>Vanilla Factions Expanded - Ancients</name>
   <author>Odin</author>
   <description>Ancient-themed content for RimWorld</description>

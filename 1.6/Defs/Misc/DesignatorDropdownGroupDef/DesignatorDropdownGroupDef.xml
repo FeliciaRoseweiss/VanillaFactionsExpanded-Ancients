@@ -1,14 +1,9 @@
-diff --git a//dev/null b/1.6/Defs/Misc/DesignatorDropdownGroupDef/DesignatorDropdownGroupDef.xml
-index 0000000000000000000000000000000000000000..087886161af65691226badeded0830eaf0c92056 100644
---- a//dev/null
-+++ b/1.6/Defs/Misc/DesignatorDropdownGroupDef/DesignatorDropdownGroupDef.xml
-@@ -0,0 +1,9 @@
-+<?xml version="1.0" encoding="utf-8" ?>
-+<Defs>
-+
-+  <DesignatorDropdownGroupDef>
-+    <defName>VFEA_WallLampColoured</defName>
-+    <label>wall lamp</label>
-+  </DesignatorDropdownGroupDef>
-+  
-+</Defs>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DesignatorDropdownGroupDef>
+    <defName>VFEA_WallLampColoured</defName>
+    <label>wall lamp</label>
+  </DesignatorDropdownGroupDef>
+
+</Defs>

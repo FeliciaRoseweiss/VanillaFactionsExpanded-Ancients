@@ -1,32 +1,27 @@
-diff --git a//dev/null b/1.6/Patches/IsolationistProselytizerPatch.xml
-index 0000000000000000000000000000000000000000..23b3437178a631d839d179678b889691b605ebd2 100644
---- a//dev/null
-+++ b/1.6/Patches/IsolationistProselytizerPatch.xml
-@@ -0,0 +1,27 @@
-+<?xml version="1.0" encoding="utf-8"?>
-+<Patch>
-+
-+
-+	
-+	<Operation Class="PatchOperationConditional">
-+		<success>Always</success>
-+		<xpath>/Defs/MemeDef[defName = "Proselytizer"]/exclusionTags</xpath>
-+		<nomatch Class="PatchOperationAdd">
-+			<xpath>/Defs/MemeDef[defName = "Proselytizer"]</xpath>
-+			<value>
-+				<exclusionTags>
-+					<li>IsolationistProselytizer</li>
-+				</exclusionTags>
-+			</value>
-+		</nomatch>
-+		<match Class="PatchOperationAdd">
-+		<xpath>/Defs/MemeDef[defName = "Proselytizer"]/exclusionTags</xpath>
-+			<value>
-+				<li>IsolationistProselytizer</li>
-+			</value>
-+		</match>
-+	</Operation>
-+	
-+	
-+	
-+</Patch>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+
+
+	<Operation Class="PatchOperationConditional">
+		<success>Always</success>
+		<xpath>/Defs/MemeDef[defName = "Proselytizer"]/exclusionTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/MemeDef[defName = "Proselytizer"]</xpath>
+			<value>
+				<exclusionTags>
+					<li>IsolationistProselytizer</li>
+				</exclusionTags>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+		<xpath>/Defs/MemeDef[defName = "Proselytizer"]/exclusionTags</xpath>
+			<value>
+				<li>IsolationistProselytizer</li>
+			</value>
+		</match>
+	</Operation>
+
+
+
+</Patch>

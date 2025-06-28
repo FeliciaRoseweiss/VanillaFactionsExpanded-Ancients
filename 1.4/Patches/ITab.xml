@@ -1,4 +1,4 @@
-<Patch>
+﻿<Patch>
     <Operation Class="PatchOperationConditional">
         <xpath>Defs/ThingDef[@Name="BasePawn"]/inspectorTabs</xpath>
         <nomatch Class="PatchOperationAdd">

@@ -1,4 +1,4 @@
-<Patch>
+﻿<Patch>
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThinkTreeDef[defName="MentalStateNonCritical"]/thinkRoot/subNodes</xpath>
         <value>

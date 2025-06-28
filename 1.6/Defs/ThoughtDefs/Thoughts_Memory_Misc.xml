@@ -1,27 +1,22 @@
-diff --git a//dev/null b/1.6/Defs/ThoughtDefs/Thoughts_Memory_Misc.xml
-index 0000000000000000000000000000000000000000..373ade479050d6afbc1ed08762a03905176de1ca 100644
---- a//dev/null
-+++ b/1.6/Defs/ThoughtDefs/Thoughts_Memory_Misc.xml
-@@ -0,0 +1,22 @@
-+﻿<?xml version="1.0" encoding="utf-8" ?>
-+<Defs>
-+
-+
-+
-+	<ThoughtDef>
-+		<defName>VFEA_AcquiredSuperpower</defName>
-+		<durationDays>1</durationDays>
-+	
-+		<stages>
-+			<li>
-+				<label>got a superpower</label>
-+				<description>I feel... invincible!</description>
-+				<baseMoodEffect>3</baseMoodEffect>
-+			</li>
-+		</stages>
-+	</ThoughtDef>
-+
-+
-+
-+
-+</Defs>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+
+	<ThoughtDef>
+		<defName>VFEA_AcquiredSuperpower</defName>
+		<durationDays>1</durationDays>
+
+		<stages>
+			<li>
+				<label>got a superpower</label>
+				<description>I feel... invincible!</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+
+
+</Defs>

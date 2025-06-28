@@ -1,45 +1,40 @@
-diff --git a//dev/null b/1.6/Defs/JobDefs/Jobs_Misc.xml
-index 0000000000000000000000000000000000000000..9aaa083500ad6533662f0916684ebb385dea1879 100644
---- a//dev/null
-+++ b/1.6/Defs/JobDefs/Jobs_Misc.xml
-@@ -0,0 +1,40 @@
-+﻿<?xml version="1.0" encoding="utf-8" ?>
-+<Defs>
-+  
-+  <JobDef>
-+    <defName>VFEA_ZealotExecution</defName>
-+    <driverClass>VFEAncients.JobDriver_ZealotExecution</driverClass>
-+    <reportString>executing TargetA.</reportString>
-+    <casualInterruptible>false</casualInterruptible>
-+    <alwaysShowWeapon>true</alwaysShowWeapon>
-+  </JobDef>
-+
-+  <JobDef>
-+    <defName>VFEA_EnterGeneTailoringPod</defName>
-+    <driverClass>VFEAncients.JobDriver_EnterGeneTailoringPod</driverClass>
-+    <reportString>entering gene-tailoring pod.</reportString>
-+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
-+  </JobDef>
-+
-+  <JobDef>
-+    <defName>VFEA_CarryToGeneTailoringPod</defName>
-+    <driverClass>VFEAncients.JobDriver_CarryToGeneTailoringPod</driverClass>
-+    <reportString>carrying TargetA to gene-tailoring pod.</reportString>
-+    <casualInterruptible>false</casualInterruptible>
-+  </JobDef>
-+  
-+  <JobDef>
-+    <defName>VFEA_PrisonerInterrogate</defName>
-+    <driverClass>VFEAncients.JobDriver_InterrogatePrisoner</driverClass>
-+    <reportString>interrogating TargetA.</reportString>
-+    <alwaysShowWeapon>true</alwaysShowWeapon>
-+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
-+  </JobDef>
-+  
-+  <JobDef>
-+    <defName>VFEA_CarryToBioBatteryTank</defName>
-+    <driverClass>VFEAncients.JobDriver_CarryToBioBattery</driverClass>
-+    <reportString>carrying TargetA to bio-battery tank.</reportString>
-+  	<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
-+  </JobDef>
-+</Defs>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JobDef>
+    <defName>VFEA_ZealotExecution</defName>
+    <driverClass>VFEAncients.JobDriver_ZealotExecution</driverClass>
+    <reportString>executing TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+  </JobDef>
+
+  <JobDef>
+    <defName>VFEA_EnterGeneTailoringPod</defName>
+    <driverClass>VFEAncients.JobDriver_EnterGeneTailoringPod</driverClass>
+    <reportString>entering gene-tailoring pod.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>VFEA_CarryToGeneTailoringPod</defName>
+    <driverClass>VFEAncients.JobDriver_CarryToGeneTailoringPod</driverClass>
+    <reportString>carrying TargetA to gene-tailoring pod.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+  <JobDef>
+    <defName>VFEA_PrisonerInterrogate</defName>
+    <driverClass>VFEAncients.JobDriver_InterrogatePrisoner</driverClass>
+    <reportString>interrogating TargetA.</reportString>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>VFEA_CarryToBioBatteryTank</defName>
+    <driverClass>VFEAncients.JobDriver_CarryToBioBattery</driverClass>
+    <reportString>carrying TargetA to bio-battery tank.</reportString>
+  	<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+</Defs>
