@@ -36,5 +36,10 @@ This mod will expand on the ancient ruins in vanilla games, adding new ancient s
 		<li>Ludeon.RimWorld.Core</li>
 		<li>brrainz.harmony</li>
 		<li>OskarPotocki.VanillaExpanded.VanillaExpandedFramework</li>
+		<li>VanillaExpanded.VFECore</li>
+		<li>OskarPotocki.VFE.Furniture</li>
+		<li>VanillaExpanded.VanillaFurnitureExpanded</li>
+		<li>RecipeInheritance.Core</li>
+		<li>OskarPotocki.VanillaFurnitureExpanded.Medical</li>
 	</loadAfter>
 </ModMetaData>

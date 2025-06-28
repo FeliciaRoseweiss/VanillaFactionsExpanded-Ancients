@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <FactionDef ParentName="FactionBase" Abstract="True" Name="AncientSoldiersBase">
+  <FactionDef ParentName="FactionBase" Abstract  </FactionDef>
+</Defs>
+<!-- This file is part of the Vanilla Factions Expanded - Ancients modpack for RimWorld.
+  <n>Vanilla Factions Expanded - Ancients</n>
+  <author>Odin</author>
+  <description>Ancient-themed content for RimWorld</description>
+  <version>1.6</version>
+  <url>https://github.com/Vanilla-Expanded/Vanilla-Factions-Expanded-Ancients</url>
+</ModMeta> -->ame="AncientSoldiersBase">
     <pawnSingular>ancient super-soldier</pawnSingular>
     <pawnsPlural>ancient super-soldiers</pawnsPlural>
     <categoryTag>Ancient</categoryTag>

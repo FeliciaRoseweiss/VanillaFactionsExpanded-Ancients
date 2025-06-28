@@ -4532,8 +4532,7 @@
       <li>VFEA_SealedVault</li>
     </tags>
   </KCSG.StructureLayoutDef>
-</Defs>
-<Defs>
+
   <KCSG.StructureLayoutDef>
     <name>VFEA_SealedVaults</name>
     <description>Sealed Vaults</description>

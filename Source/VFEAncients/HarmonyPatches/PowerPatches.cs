@@ -109,9 +109,29 @@ public static class PowerPatches
     public static IEnumerable<CodeInstruction> StatGetValueTranspile(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
     {
         var list = instructions.ToList();
+        
+        if (list.Count == 0)
+            return list;
+        
         var info1 = AccessTools.Field(typeof(Pawn), nameof(Pawn.ageTracker));
         var idx1 = list.FindIndex(ins => ins.LoadsField(info1));
-        var idx2 = list.FindIndex(idx1, ins => ins.opcode == OpCodes.Stloc_0);
+        if (idx1 == -1)
+            return list; // Field not found, return original instructions
+        
+        // Safe FindIndex for Stloc_0 instruction
+        var idx2 = -1;
+        for (int i = idx1; i < list.Count; i++)
+        {
+            if (list[i].opcode == OpCodes.Stloc_0)
+            {
+                idx2 = i;
+                break;
+            }
+        }
+        
+        if (idx2 == -1)
+            return list; // Stloc_0 instruction not found
+        
         list.InsertRange(idx2 + 1, new[]
         {
             new CodeInstruction(OpCodes.Ldloc_1),
@@ -141,12 +161,41 @@ public static class PowerPatches
         if (instructionsList.Count == 0)
             return instructionsList;
         
-        var startIndex = 0; // Use safe starting index
-        
         var info1 = AccessTools.Field(typeof(Pawn), nameof(Pawn.ageTracker));
         var idx1 = instructionsList.FindIndex(ins => ins.LoadsField(info1));
-        var label1 = (Label)instructionsList[instructionsList.FindIndex(idx1, ins => ins.opcode == OpCodes.Beq_S)].operand;
-        var idx2 = instructionsList.FindIndex(idx1, ins => ins.opcode == OpCodes.Pop);
+        if (idx1 == -1)
+            return instructionsList; // Field not found, return original instructions
+        
+        // Safe FindIndex with bounds checking
+        var idx_beq = -1;
+        for (int i = idx1; i < instructionsList.Count; i++)
+        {
+            if (instructionsList[i].opcode == OpCodes.Beq_S)
+            {
+                idx_beq = i;
+                break;
+            }
+        }
+        
+        if (idx_beq == -1)
+            return instructionsList; // Beq_S instruction not found
+        
+        var label1 = (Label)instructionsList[idx_beq].operand;
+        
+        // Safe FindIndex for Pop instruction
+        var idx2 = -1;
+        for (int i = idx1; i < instructionsList.Count; i++)
+        {
+            if (instructionsList[i].opcode == OpCodes.Pop)
+            {
+                idx2 = i;
+                break;
+            }
+        }
+        
+        if (idx2 == -1)
+            return instructionsList; // Pop instruction not found
+        
         instructionsList[idx2 + 1].labels.Remove(label1);
         instructionsList.InsertRange(idx2 + 1, new[]
         {
@@ -257,9 +306,32 @@ public static class PowerPatches
     public static IEnumerable<CodeInstruction> AddCauseDisableExplain(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
     {
         var list = instructions.ToList();
+        
+        if (list.Count == 0)
+            return list;
+        
         var idx1 = list.FindIndex(ins => ins.opcode == OpCodes.Ldloca_S);
-        var idx2 = list.FindIndex(idx1 + 1, ins => ins.opcode == OpCodes.Ldloca_S);
+        if (idx1 == -1)
+            return list; // First Ldloca_S instruction not found
+        
+        // Safe FindIndex for second Ldloca_S instruction
+        var idx2 = -1;
+        for (int i = idx1 + 1; i < list.Count; i++)
+        {
+            if (list[i].opcode == OpCodes.Ldloca_S)
+            {
+                idx2 = i;
+                break;
+            }
+        }
+        
+        if (idx2 == -1)
+            return list; // Second Ldloca_S instruction not found
+        
         var idx3 = list.FindLastIndex(ins => ins.opcode == OpCodes.Brfalse_S);
+        if (idx3 == -1)
+            return list; // Brfalse_S instruction not found
+        
         var label1 = generator.DefineLabel();
         var label2 = list[idx3].operand;
         list[idx3].operand = label1;
