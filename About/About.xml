@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
- <ModMetaData>
+<ModMetaData>
 	<name>Vanilla Factions Expanded - Ancients</name>
 	<author>Oskar Potocki, xrushha, legodude17</author>
 	<url></url>
@@ -33,3 +33,8 @@ This mod will expand on the ancient ruins in vanilla games, adding new ancient s
 	<loadAfter>
 		<li>Ludeon.RimWorld.Ideology</li>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>Ludeon.RimWorld.Core</li>
+		<li>brrainz.harmony</li>
+		<li>OskarPotocki.VanillaExpanded.VanillaExpandedFramework</li>
+	</loadAfter>
+</ModMetaData>

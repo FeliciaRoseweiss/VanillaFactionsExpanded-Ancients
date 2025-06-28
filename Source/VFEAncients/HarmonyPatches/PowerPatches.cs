@@ -135,13 +135,20 @@ public static class PowerPatches
 
     public static IEnumerable<CodeInstruction> StatExplanationTranspile(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
     {
-        var list = instructions.ToList();
+        var instructionsList = instructions.ToList();
+        
+        // Add bounds checking before FindIndex call
+        if (instructionsList.Count == 0)
+            return instructionsList;
+        
+        var startIndex = 0; // Use safe starting index
+        
         var info1 = AccessTools.Field(typeof(Pawn), nameof(Pawn.ageTracker));
-        var idx1 = list.FindIndex(ins => ins.LoadsField(info1));
-        var label1 = (Label)list[list.FindIndex(idx1, ins => ins.opcode == OpCodes.Beq_S)].operand;
-        var idx2 = list.FindIndex(idx1, ins => ins.opcode == OpCodes.Pop);
-        list[idx2 + 1].labels.Remove(label1);
-        list.InsertRange(idx2 + 1, new[]
+        var idx1 = instructionsList.FindIndex(ins => ins.LoadsField(info1));
+        var label1 = (Label)instructionsList[instructionsList.FindIndex(idx1, ins => ins.opcode == OpCodes.Beq_S)].operand;
+        var idx2 = instructionsList.FindIndex(idx1, ins => ins.opcode == OpCodes.Pop);
+        instructionsList[idx2 + 1].labels.Remove(label1);
+        instructionsList.InsertRange(idx2 + 1, new[]
         {
             new CodeInstruction(OpCodes.Ldloc_2).WithLabels(label1),
             new CodeInstruction(OpCodes.Ldloc_0),
@@ -150,7 +157,7 @@ public static class PowerPatches
             new CodeInstruction(OpCodes.Ldarg_0),
             new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(PowerPatches), nameof(PowerModifyExplanation)))
         });
-        return list;
+        return instructionsList;
     }
 
     public static void PowerModifyExplanation(Pawn pawn, StringBuilder builder, StatDef stat, StatWorker worker)
