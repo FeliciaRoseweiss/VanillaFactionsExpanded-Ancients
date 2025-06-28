@@ -16,8 +16,15 @@ namespace VFEAncients
         public override void DoPatches(Harmony harm)
         {
             base.DoPatches(harm);
-            harm.Patch(AccessTools.Method(typeof(FloatMenuMakerMap), "AddJobGiverWorkOrders"), new HarmonyMethod(GetType(), nameof(StoreOpts)),
-                new HarmonyMethod(GetType(), nameof(DisableOpts)));
+            
+            // Проверяем, существует ли метод перед патчингом
+            var addJobGiverWorkOrdersMethod = AccessTools.Method(typeof(FloatMenuMakerMap), "AddJobGiverWorkOrders");
+            if (addJobGiverWorkOrdersMethod != null)
+            {
+                harm.Patch(addJobGiverWorkOrdersMethod, 
+                    new HarmonyMethod(GetType(), nameof(StoreOpts)),
+                    new HarmonyMethod(GetType(), nameof(DisableOpts)));
+            }
         }
 
         public static void StoreOpts(List<FloatMenuOption> opts, ref List<FloatMenuOption> __state, Pawn pawn)

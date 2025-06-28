@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using RimWorld.Planet;
 using Verse;
+using VEF.Abilities;
 
 namespace VFEAncients;
 

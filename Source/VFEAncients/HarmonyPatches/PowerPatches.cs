@@ -138,8 +138,24 @@ public static class PowerPatches
         var list = instructions.ToList();
         var info1 = AccessTools.Field(typeof(Pawn), nameof(Pawn.ageTracker));
         var idx1 = list.FindIndex(ins => ins.LoadsField(info1));
-        var label1 = (Label)list[list.FindIndex(idx1, ins => ins.opcode == OpCodes.Beq_S)].operand;
+        
+        if (idx1 == -1)
+            return instructions;
+            
+        var beqIndex = list.FindIndex(idx1, ins => ins.opcode == OpCodes.Beq_S);
+        
+        if (beqIndex == -1)
+            return instructions;
+            
+        var label1 = (Label)list[beqIndex].operand;
         var idx2 = list.FindIndex(idx1, ins => ins.opcode == OpCodes.Pop);
+        
+        if (idx2 == -1)
+            return instructions;
+            
+        if (idx2 + 1 >= list.Count)
+            return instructions;
+            
         list[idx2 + 1].labels.Remove(label1);
         list.InsertRange(idx2 + 1, new[]
         {

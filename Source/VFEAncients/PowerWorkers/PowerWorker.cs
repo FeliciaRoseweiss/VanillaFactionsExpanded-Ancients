@@ -6,8 +6,8 @@ using System.Text;
 using HarmonyLib;
 using RimWorld;
 using Verse;
+using VEF.Abilities;
 using VFEAncients.HarmonyPatches;
-using VFECore.Abilities;
 
 namespace VFEAncients
 {
