@@ -37,7 +37,7 @@
     </graphicData>
   </FleckDef>
 
-  <VEF.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_SuperJump</defName>
     <label>super jump</label>
     <description>Jump over a short distance (10 cells) within line of sight to close the distance to the enemy.</description>
@@ -48,8 +48,8 @@
     <cooldownTime>180</cooldownTime>
     <castTime>15</castTime>
     <chance>0</chance>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_Berserk</defName>
     <label>berserk (telepathy)</label>
     <description>Cast on an enemy to turn them on their allies.</description>
@@ -64,8 +64,8 @@
     <targetFlecks>
       <li>VFEA_Fleck_PsychicDistortion</li>
     </targetFlecks>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_Calm</defName>
     <label>calm (telepathy)</label>
     <description>Cast on a friend to instantly snap them out of a mental break.</description>
@@ -80,8 +80,8 @@
     <targetFlecks>
       <li>VFEA_Fleck_PsychicDistortion</li>
     </targetFlecks>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_PsychicShock</defName>
     <label>psychic shock</label>
     <description>Fire a psychic shock on the enemy, rendering them unconscious.</description>
@@ -106,8 +106,8 @@
       <li>VFEA_Fleck_PsychicDistortion</li>
     </targetFlecks>
     <castSound>PsychicShockLanceCast</castSound>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_Invisibility</defName>
     <label>invisibility</label>
     <description>Turns invisible for 60 seconds.</description>
@@ -119,8 +119,8 @@
     <chance>0</chance>
     <casterHediff>VFEA_Invisiblity</casterHediff>
     <castSound>VFEA_Invisibility</castSound>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_SelfControl</defName>
     <label>self-control</label>
     <description>When activated, immediately stop any mental breaks this pawn is under effect of.</description>
@@ -136,8 +136,8 @@
         <oldClass>VFEAncients.Ability_CalmSelf</oldClass>
       </li>
     </modExtensions>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_Overshield</defName>
     <label>overshield</label>
     <description>Generate an impenetrable shield around yourself that lasts 30 seconds.</description>
@@ -155,8 +155,8 @@
       </li>
     </modExtensions>
     <castSound>VFEA_OvershieldCast</castSound>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_SummonLightning</defName>
     <label>summon lightning</label>
     <description>Designate an area that will be blasted by lightning bolts.</description>
@@ -174,8 +174,8 @@
         <building>VFEA_LightningSpot</building>
       </li>
     </modExtensions>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_AnimalSpeech</defName>
     <label>animal speech</label>
     <description>When cast on a man hunting animal, calms it. When cast on a wild animal, tame it.</description>
@@ -187,8 +187,8 @@
     <chance>0</chance>
     <range>29.9</range>
     <castSound>VFEA_AnimalSpeech</castSound>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_Empathy</defName>
     <label>empathy</label>
     <description>Cast on an ally to give them a strong mood buff lasting 24 hours.</description>
@@ -205,8 +205,8 @@
       </li>
     </modExtensions>
     <castSound>VFEA_Empathy_Cast</castSound>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_Heal</defName>
     <label>heal others</label>
     <description>Cast on an ally to cure them of all their wounds.</description>
@@ -219,8 +219,8 @@
     <range>14.9</range>
     <castSound>DispensePaste</castSound>
     <castFleck>VFEA_Fleck_HealSmoke</castFleck>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_GloryKill</defName>
     <label>glory kill</label>
     <description>Kill a random enemy in 1 cell radius, spawning large amount of blood everywhere, and removing a random amount of their limbs.</description>
@@ -231,8 +231,8 @@
     <castTime>0</castTime>
     <chance>0</chance>
     <castSound>VFEA_GloryKill_Cast</castSound>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_ElectromagneticPulse</defName>
     <label>electro-magnetic pulse</label>
     <description>Generate a large EMP explosion around yourself, disabling all electronics in radius.</description>
@@ -253,8 +253,8 @@
         <oldClass>VFEAncients.Ability_Explode</oldClass>
       </li>
     </modExtensions>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_FireBreath</defName>
     <label>fire breath</label>
     <description>Spew fire up to 12 cells range in front of you, burning enemies and sending them running.</description>
@@ -271,8 +271,8 @@
       </li>
     </modExtensions>
     <castSound>VFEA_IceBreath_Shot</castSound>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_IceBreath</defName>
     <label>ice breath</label>
     <description>Spew ice up to 12 cells range in front of you, slowing enemies and applying high hypothermia.</description>
@@ -289,8 +289,8 @@
       </li>
     </modExtensions>
     <castSound>VFEA_IceBreath_Shot</castSound>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_LaserEyes</defName>
     <label>laser eyes</label>
     <description>Fire an incredibly powerful beam of energy from your eyes. Maximum range is 35.</description>
@@ -307,8 +307,8 @@
       </li>
     </modExtensions>
     <castSound>VFEA_LaserEyes_Shot</castSound>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_MatterPhasing</defName>
     <label>matter phasing</label>
     <description>Turn on to phase through walls for 10 seconds.</description>
@@ -321,8 +321,8 @@
     <castFleck>RE_Fleck_MatterDistortion</castFleck>
     <castSound>VFEA_MatterPhasing_Sustainer</castSound>
     <casterHediff>VFEA_Phasing</casterHediff>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_ElectricityBlast</defName>
     <label>electricity blast</label>
     <description>Fire an arc of lightning that bounced between enemies, burning them and disabling any electronics.</description>
@@ -347,8 +347,8 @@
         <addFire>true</addFire>
       </li>
     </modExtensions>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_SpeedBurst</defName>
     <label>speed burst</label>
     <description>4x Movement speed. Melee cooldown halved. Lasts 30 seconds.</description>
@@ -360,8 +360,8 @@
     <chance>0</chance>
     <casterHediff>VFEA_SpeedBurst</casterHediff>
     <castSound>VFEA_SpeedBurst</castSound>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_AcidBreath</defName>
     <label>acid spitting</label>
     <description>The subject has developed sacs of concentrated chemicals in their chest. The sacs are connected via tubes to the corners of their mouth and can be squirted out by contracting their chest when spitting, reacting with oxygen and forming globs of caustic jelly.</description>
@@ -378,8 +378,8 @@
       </li>
     </modExtensions>
     <castSound>VFEA_AcidSpit_Shot</castSound>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_Fireball</defName>
     <label>fireball</label>
     <description>The subject has developed a sac of jellied chemfuel in the palm of their hand along with numerous glands. Once every 30 seconds, these glands extrude a glob of napalm into a closed fist which can then be tossed out to ignite with the air, before landing and setting a small area on fire.</description>
@@ -395,8 +395,8 @@
         <projectile>VFEA_Fireball</projectile>
       </li>
     </modExtensions>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_MetamorphosisTurtle</defName>
     <label>metamorphosis (turtle)</label>
     <description>The subject is capable of temporarily exerting a psychic force which forces their body to take the shape of what the mind is convinced it should be. In this case, they adopt the form of a tortoise, with the same health, size and abilities, before their body snaps back into its actual shape after 60 seconds.</description>
@@ -412,8 +412,8 @@
       </li>
     </modExtensions>
     <castSound>VFEA_Metamorphosis</castSound>
-  </VEF.Abilities.AbilityDef>
-  <VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
+  <VanillaExpandedFramework.Abilities.AbilityDef>
     <defName>VFEA_MetamorphosisWarg</defName>
     <label>metamorphosis (warg)</label>
     <description>The subject is capable of temporarily exerting a psychic force which forces their body to take the shape of what the mind is convinced it should be. In this case, they adopt the form of a warg, with the same health, size and abilities, before their body snaps back into its actual shape after 60 seconds.</description>
@@ -429,5 +429,5 @@
       </li>
     </modExtensions>
     <castSound>VFEA_Metamorphosis</castSound>
-  </VEF.Abilities.AbilityDef>
+  </VanillaExpandedFramework.Abilities.AbilityDef>
 </Defs>

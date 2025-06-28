@@ -14,15 +14,63 @@ public static class BuildingPatches
 {
     public static void Do(Harmony harm)
     {
-        harm.Patch(AccessTools.Method(typeof(FloatMenuMakerMap), "AddHumanlikeOrders"),
-            postfix: new HarmonyMethod(typeof(BuildingPatches), nameof(AddCarryJobs)));
-        harm.Patch(AccessTools.Method(typeof(SteadyEnvironmentEffects), nameof(SteadyEnvironmentEffects.FinalDeteriorationRate),
-                new[] { typeof(Thing), typeof(bool), typeof(bool), typeof(TerrainDef), typeof(List<string>) }),
-            postfix: new HarmonyMethod(typeof(BuildingPatches), nameof(AddDeterioration)));
-        harm.Patch(AccessTools.Method(typeof(JobDriver_Hack), "MakeNewToils"), postfix: new HarmonyMethod(typeof(BuildingPatches), nameof(FixHacking)));
-        harm.Patch(AccessTools.Method(typeof(PowerNet), nameof(PowerNet.PowerNetTick)),
-            transpiler: new HarmonyMethod(typeof(BuildingPatches), nameof(PowerNetOnSolarFlareTranspiler)),
-            postfix: new HarmonyMethod(typeof(BuildingPatches), nameof(PowerNetOnSolarFlarePostfix)));
+        try
+        {
+            // Безопасное патчинг с проверкой существования методов
+            var addHumanlikeOrdersMethod = AccessTools.Method(typeof(FloatMenuMakerMap), "AddHumanlikeOrders");
+            if (addHumanlikeOrdersMethod != null)
+            {
+                harm.Patch(addHumanlikeOrdersMethod,
+                    postfix: new HarmonyMethod(typeof(BuildingPatches), nameof(AddCarryJobs)));
+                Log.Message("VFEA: BuildingPatches - AddHumanlikeOrders patch applied");
+            }
+            else
+            {
+                Log.Warning("VFEA: BuildingPatches - AddHumanlikeOrders method not found");
+            }
+
+            var deteriorationMethod = AccessTools.Method(typeof(SteadyEnvironmentEffects), nameof(SteadyEnvironmentEffects.FinalDeteriorationRate),
+                new[] { typeof(Thing), typeof(bool), typeof(bool), typeof(TerrainDef), typeof(List<string>) });
+            if (deteriorationMethod != null)
+            {
+                harm.Patch(deteriorationMethod,
+                    postfix: new HarmonyMethod(typeof(BuildingPatches), nameof(AddDeterioration)));
+                Log.Message("VFEA: BuildingPatches - FinalDeteriorationRate patch applied");
+            }
+            else
+            {
+                Log.Warning("VFEA: BuildingPatches - FinalDeteriorationRate method not found");
+            }
+
+            var hackingMethod = AccessTools.Method(typeof(JobDriver_Hack), "MakeNewToils");
+            if (hackingMethod != null)
+            {
+                harm.Patch(hackingMethod, 
+                    postfix: new HarmonyMethod(typeof(BuildingPatches), nameof(FixHacking)));
+                Log.Message("VFEA: BuildingPatches - MakeNewToils patch applied");
+            }
+            else
+            {
+                Log.Warning("VFEA: BuildingPatches - JobDriver_Hack.MakeNewToils method not found");
+            }
+
+            var powerNetTickMethod = AccessTools.Method(typeof(PowerNet), nameof(PowerNet.PowerNetTick));
+            if (powerNetTickMethod != null)
+            {
+                harm.Patch(powerNetTickMethod,
+                    transpiler: new HarmonyMethod(typeof(BuildingPatches), nameof(PowerNetOnSolarFlareTranspiler)),
+                    postfix: new HarmonyMethod(typeof(BuildingPatches), nameof(PowerNetOnSolarFlarePostfix)));
+                Log.Message("VFEA: BuildingPatches - PowerNetTick patch applied");
+            }
+            else
+            {
+                Log.Warning("VFEA: BuildingPatches - PowerNet.PowerNetTick method not found");
+            }
+        }
+        catch (Exception ex)
+        {
+            Log.Error($"VFEA: BuildingPatches - Error during patching: {ex.Message}");
+        }
     }
 
     public static IEnumerable<CodeInstruction> PowerNetOnSolarFlareTranspiler(IEnumerable<CodeInstruction> codeInstructions)

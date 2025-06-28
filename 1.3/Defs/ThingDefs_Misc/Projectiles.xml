@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<VEF.ExpandableProjectileDef ParentName="BaseBullet">
+	<VanillaExpandedFramework.ExpandableProjectileDef ParentName="BaseBullet">
 		<defName>VFEA_FireBreath</defName>
 		<label>fire breath</label>
 		<thingClass>VEF.FlamethrowProjectile</thingClass>
@@ -26,8 +26,8 @@
 		<tickDamageRate>20</tickDamageRate>
 		<dealsDamageOnce>true</dealsDamageOnce>
 		<minDistanceToAffect>1</minDistanceToAffect>
-	</VEF.ExpandableProjectileDef>
-	<VEF.ExpandableProjectileDef ParentName="BaseBullet">
+	</VanillaExpandedFramework.ExpandableProjectileDef>
+	<VanillaExpandedFramework.ExpandableProjectileDef ParentName="BaseBullet">
 		<defName>VFEA_IceBreath</defName>
 		<label>ice breath</label>
 		<thingClass>VFEAncients.IceProjectile</thingClass>
@@ -53,7 +53,7 @@
 		<tickDamageRate>20</tickDamageRate>
 		<dealsDamageOnce>true</dealsDamageOnce>
 		<minDistanceToAffect>1</minDistanceToAffect>
-	</VEF.ExpandableProjectileDef>
+	</VanillaExpandedFramework.ExpandableProjectileDef>
 	<ThingDef ParentName="BaseBullet">
 		<defName>VFEA_LaserEyeBeam</defName>
 		<label>laser eye beam</label>
