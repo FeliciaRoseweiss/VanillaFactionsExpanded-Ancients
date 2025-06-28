@@ -39,10 +39,6 @@
       <HintPath>..\..\..\..\..\..\steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="HeavyWeapons">
-      <HintPath>..\..\..\VanillaWeaponsExpanded-Heavy\1.6\Assemblies\HeavyWeapons.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -65,7 +61,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VEF">
-      <HintPath>..\..\..\..\..\..\steam\steamapps\workshop\content\294100\2023507013\1.6\Assemblies\VEF.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Steam\steamapps\workshop\content\294100\2023507013\1.6\Assemblies\VEF.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -201,7 +197,7 @@
     <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\..\..\..\..\..\steam\steamapps\workshop\content\294100\2023507013\1.6\Assemblies\VEF.dll" />
+    <Analyzer Include="..\..\..\..\..\..\..\..\Steam\steamapps\workshop\content\294100\2023507013\1.6\Assemblies\VEF.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
