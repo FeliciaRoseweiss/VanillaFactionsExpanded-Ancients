@@ -94,13 +94,13 @@ public static class BuildingPatches
 
     public static void AddCarryJobs(List<FloatMenuOption> opts, Vector3 clickPos, Pawn pawn)
     {
-        foreach (var localTargetInfo4 in GenUI.TargetsAt(clickPos, TargetingParameters.ForCarryToBiosculpterPod(pawn), true))
+        foreach (var localTargetInfo4 in GenUI.TargetsAt(clickPos, TargetingParameters.ForPawns(), true))
         {
             var target = localTargetInfo4.Pawn;
             if ((target.IsColonist && target.Downed) || target.IsPrisonerOfColony) CompGeneTailoringPod.AddCarryToPodJobs(opts, pawn, target);
         }
 
-        foreach (var info in GenUI.TargetsAt(clickPos, TargetingParameters.ForRescue(pawn)))
+        foreach (var info in GenUI.TargetsAt(clickPos, TargetingParameters.ForPawns()))
         {
             var target = info.Pawn;
             if (target.Downed) CompBioBattery.AddCarryToBatteryJobs(opts, pawn, target);

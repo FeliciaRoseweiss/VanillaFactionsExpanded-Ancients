@@ -59,10 +59,6 @@ namespace VFEAncients
         }
     }
 
-    public class WorkerData
-    {
-    }
-
     public enum PowerType
     {
         Superpower,

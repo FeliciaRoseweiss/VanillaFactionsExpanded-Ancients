@@ -1,15 +1,30 @@
 ﻿using RimWorld;
 using UnityEngine;
 using Verse;
-using VEF;
+using VEF; // Убедитесь, что сборка VanillaExpandedFramework подключена
 
 namespace VFEAncients;
 
-public class IceProjectile : ExpandableProjectile
+// Используем Projectile вместо ExpandableProjectile если VanillaExpandedFramework недоступна
+public class IceProjectile : Projectile
 {
-    public override void DoDamage(IntVec3 pos)
+    protected bool customImpact;
+
+    public override void Impact(Thing hitThing, bool blockedByShield = false)
     {
-        base.DoDamage(pos);
+        if (!customImpact)
+        {
+            base.Impact(hitThing, blockedByShield);
+            DoDamage(Position);
+        }
+        else
+        {
+            base.Impact(hitThing, blockedByShield);
+        }
+    }
+
+    public virtual void DoDamage(IntVec3 pos)
+    {
         try
         {
             if (pos != launcher.Position && launcher.Map != null && pos.InBounds(launcher.Map))
@@ -33,7 +48,5 @@ public class IceProjectile : ExpandableProjectile
             }
         }
         catch { }
-
-        ;
     }
 }

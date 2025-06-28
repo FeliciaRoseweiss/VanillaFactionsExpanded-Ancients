@@ -38,24 +38,4 @@ namespace VFEAncients
 
         public override string SettingsCategory() => Content.Name;
     }
-
-    public class VFEAncientsSettings : ModSettings
-    {
-        public bool enableGloryKillMusic = true;
-
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Values.Look(ref enableGloryKillMusic, "enableGloryKillMusic", true);
-        }
-
-        public void DoSettingsWindowContents(Rect inRect)
-        {
-            var rect = new Rect(inRect.x, inRect.y, inRect.width, inRect.height);
-            var listingStandard = new Listing_Standard();
-            listingStandard.Begin(rect);
-            listingStandard.CheckboxLabeled("VFEAncients.EnableGloryKillMusic".Translate(), ref enableGloryKillMusic);
-            listingStandard.End();
-        }
-    }
 }

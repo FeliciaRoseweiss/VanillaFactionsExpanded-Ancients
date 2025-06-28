@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using HarmonyLib;
-using HeavyWeapons;
 using RimWorld;
 using Verse;
 using VFEAncients.HarmonyPatches;

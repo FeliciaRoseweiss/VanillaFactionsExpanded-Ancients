@@ -49,7 +49,7 @@ public class PointDefensePatches
 
             if (target.IsValid) return true;
             if (searcher.Opts.AtPods)
-                target = searcher.Map.listerThings.ThingsInGroup(ThingRequestGroup.ActiveDropPod)
+                target = searcher.Map.listerThings.AllThings
                     .Where(t => t is DropPodIncoming pod && (pod.Contents.innerContainer.OfType<Pawn>().FirstOrDefault()?.HostileTo(searcher) ?? false) &&
                                 Mathf.Abs((t.DrawPos - searcher.DrawPos).magnitude) <= range)
                     .OrderByDescending(t => Mathf.Abs((t.DrawPos - searcher.DrawPos).magnitude))
