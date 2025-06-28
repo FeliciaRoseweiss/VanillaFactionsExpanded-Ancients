@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using HarmonyLib;
-using RimWorld;
 using Verse;
 using Verse.AI;
 
@@ -13,7 +10,7 @@ public static class Patch_FloatMenuMakerMap
         public static bool CanEquip(Pawn pawn, Thing equipment)
         {
             // Default implementation - can be overridden by patches
-            return pawn.CanReach(equipment, PathEndMode.OnCell, Danger.Deadly) && 
+            return pawn.CanReach(equipment, PathEndMode.OnCell, Danger.Deadly) &&
                    equipment.def.IsWeapon || equipment.def.IsApparel;
         }
     }
